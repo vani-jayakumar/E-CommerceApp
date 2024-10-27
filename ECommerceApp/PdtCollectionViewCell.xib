@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PdtCell" id="gTV-IL-0wX" customClass="PdtCollectionViewCell" customModule="ECommerceApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="213" height="235"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="213" height="235"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q2q-Jt-CAh">
+                        <rect key="frame" x="31" y="34" width="151" height="50"/>
+                        <color key="backgroundColor" red="0.8470726059" green="0.79517529669999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="sTn-DJ-Rui"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQc-FI-ZWo">
+                        <rect key="frame" x="84" y="114" width="45" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="eEo-mw-Oeo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKD-Vs-paY">
+                        <rect key="frame" x="82" y="134" width="49" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="XLq-PZ-VqO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFm-wi-9kW">
+                        <rect key="frame" x="87" y="159" width="39" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="HdD-HP-1bA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEH-mX-6LQ">
+                        <rect key="frame" x="86.5" y="94" width="40" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="gsV-4D-n9l"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="nFm-wi-9kW" firstAttribute="top" secondItem="WKD-Vs-paY" secondAttribute="bottom" constant="10" id="0AG-FF-NwN"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="Q2q-Jt-CAh" secondAttribute="top" constant="10" id="1eD-fo-j9U"/>
+                <constraint firstItem="Q2q-Jt-CAh" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="23u-qA-ppJ"/>
+                <constraint firstItem="WKD-Vs-paY" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="NfG-Tb-zQh"/>
+                <constraint firstItem="Q2q-Jt-CAh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="31" id="SCf-bs-xJc"/>
+                <constraint firstItem="WKD-Vs-paY" firstAttribute="top" secondItem="XQc-FI-ZWo" secondAttribute="bottom" constant="5" id="SQ8-7b-W6I"/>
+                <constraint firstItem="nFm-wi-9kW" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="T96-3T-b7O"/>
+                <constraint firstItem="XQc-FI-ZWo" firstAttribute="top" secondItem="SEH-mX-6LQ" secondAttribute="bottom" constant="5" id="b2S-tN-0km"/>
+                <constraint firstItem="SEH-mX-6LQ" firstAttribute="top" secondItem="Q2q-Jt-CAh" secondAttribute="bottom" constant="10" id="dhG-8K-xJH"/>
+                <constraint firstItem="XQc-FI-ZWo" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="mvO-nq-k2o"/>
+                <constraint firstItem="SEH-mX-6LQ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="rgP-3Y-h9z"/>
+            </constraints>
+            <size key="customSize" width="213" height="235"/>
+            <connections>
+                <outlet property="namelabel" destination="XQc-FI-ZWo" id="szv-S3-x69"/>
+                <outlet property="offerlabel" destination="SEH-mX-6LQ" id="Hnn-M3-HrS"/>
+                <outlet property="pdtImage" destination="Q2q-Jt-CAh" id="Nxb-Yq-gH8"/>
+                <outlet property="pricelabel" destination="nFm-wi-9kW" id="c21-0i-L6o"/>
+                <outlet property="ratinglabel" destination="WKD-Vs-paY" id="RT4-0j-kgb"/>
+            </connections>
+            <point key="canvasLocation" x="92.028985507246389" y="131.58482142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>
