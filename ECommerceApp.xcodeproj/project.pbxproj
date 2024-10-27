@@ -26,6 +26,7 @@
 		25885ACA2CCE28A0000DC4FA /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25885AC92CCE28A0000DC4FA /* DBManager.swift */; };
 		25885AF02CCE4379000DC4FA /* ECURLResponse+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25885AEE2CCE4378000DC4FA /* ECURLResponse+CoreDataClass.swift */; };
 		25885AF12CCE4379000DC4FA /* ECURLResponse+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25885AEF2CCE4378000DC4FA /* ECURLResponse+CoreDataProperties.swift */; };
+		25885AF42CCEA1B9000DC4FA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25885AF32CCEA1B9000DC4FA /* HomeViewModel.swift */; };
 		25C3A1152CCE218D00BB7914 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C3A1142CCE218D00BB7914 /* CoreData.framework */; };
 		25C3A1182CCE228300BB7914 /* ECCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25C3A1162CCE228300BB7914 /* ECCoreDataModel.xcdatamodeld */; };
 		25E131A82CCCD35A00C466A0 /* TopBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E131A62CCCD35A00C466A0 /* TopBannerTableViewCell.swift */; };
@@ -68,6 +69,7 @@
 		25885AC92CCE28A0000DC4FA /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		25885AEE2CCE4378000DC4FA /* ECURLResponse+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ECURLResponse+CoreDataClass.swift"; sourceTree = "<group>"; };
 		25885AEF2CCE4378000DC4FA /* ECURLResponse+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ECURLResponse+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		25885AF32CCEA1B9000DC4FA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		25C3A1142CCE218D00BB7914 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		25C3A1172CCE228300BB7914 /* ECCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ECCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		25E131A62CCCD35A00C466A0 /* TopBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBannerTableViewCell.swift; sourceTree = "<group>"; };
@@ -121,11 +123,48 @@
 			isa = PBXGroup;
 			children = (
 				25885AE32CCE402A000DC4FA /* Model */,
+				25885AF72CCEA3D9000DC4FA /* View */,
+				25885AF62CCEA3BC000DC4FA /* ViewModel */,
 				25508DC52CCAB9F700C6CBAA /* AppDelegate.swift */,
 				25508DC72CCAB9F700C6CBAA /* SceneDelegate.swift */,
 				25508DCE2CCAB9F800C6CBAA /* Assets.xcassets */,
 				25508DD02CCAB9F800C6CBAA /* LaunchScreen.storyboard */,
 				25508DD32CCAB9F800C6CBAA /* Info.plist */,
+				25C3A1162CCE228300BB7914 /* ECCoreDataModel.xcdatamodeld */,
+			);
+			path = ECommerceApp;
+			sourceTree = "<group>";
+		};
+		25885AE32CCE402A000DC4FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25885AED2CCE4378000DC4FA /* CDEntities */,
+				25508DE12CCABB4600C6CBAA /* ECmodel.swift */,
+				25885AC92CCE28A0000DC4FA /* DBManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		25885AED2CCE4378000DC4FA /* CDEntities */ = {
+			isa = PBXGroup;
+			children = (
+				25885AEE2CCE4378000DC4FA /* ECURLResponse+CoreDataClass.swift */,
+				25885AEF2CCE4378000DC4FA /* ECURLResponse+CoreDataProperties.swift */,
+			);
+			path = CDEntities;
+			sourceTree = "<group>";
+		};
+		25885AF62CCEA3BC000DC4FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				25885AF32CCEA1B9000DC4FA /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		25885AF72CCEA3D9000DC4FA /* View */ = {
+			isa = PBXGroup;
+			children = (
 				251372872CCBAA2200F552B3 /* TabViewController.swift */,
 				25508DDC2CCABA7600C6CBAA /* HomeViewController.swift */,
 				25508DDD2CCABA7600C6CBAA /* HomeViewController.xib */,
@@ -153,28 +192,8 @@
 				25E131C52CCCE35400C466A0 /* PdtCollectionViewCell.xib */,
 				25E131C92CCCE36C00C466A0 /* CatCollectionViewCell.swift */,
 				25E131CA2CCCE36C00C466A0 /* CatCollectionViewCell.xib */,
-				25C3A1162CCE228300BB7914 /* ECCoreDataModel.xcdatamodeld */,
 			);
-			path = ECommerceApp;
-			sourceTree = "<group>";
-		};
-		25885AE32CCE402A000DC4FA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				25885AED2CCE4378000DC4FA /* CDEntities */,
-				25508DE12CCABB4600C6CBAA /* ECmodel.swift */,
-				25885AC92CCE28A0000DC4FA /* DBManager.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		25885AED2CCE4378000DC4FA /* CDEntities */ = {
-			isa = PBXGroup;
-			children = (
-				25885AEE2CCE4378000DC4FA /* ECURLResponse+CoreDataClass.swift */,
-				25885AEF2CCE4378000DC4FA /* ECURLResponse+CoreDataProperties.swift */,
-			);
-			path = CDEntities;
+			path = View;
 			sourceTree = "<group>";
 		};
 		25C3A1132CCE218D00BB7914 /* Frameworks */ = {
@@ -268,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2513727F2CCB8B3700F552B3 /* OffersViewController.swift in Sources */,
+				25885AF42CCEA1B9000DC4FA /* HomeViewModel.swift in Sources */,
 				25E131A82CCCD35A00C466A0 /* TopBannerTableViewCell.swift in Sources */,
 				25E131CB2CCCE36C00C466A0 /* CatCollectionViewCell.swift in Sources */,
 				251372782CCB749500F552B3 /* AccountViewController.swift in Sources */,

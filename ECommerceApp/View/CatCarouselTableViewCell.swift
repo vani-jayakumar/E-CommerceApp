@@ -25,7 +25,7 @@ class CatCarouselTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
     }
     
 }
@@ -37,23 +37,7 @@ extension CatCarouselTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = catCollectionView.dequeueReusableCell(withReuseIdentifier: "CatCell", for: indexPath) as! CatCollectionViewCell
-        let catProduct = catProducts[indexPath.item]
-        
-        cell.nameLabel.text = catProduct.title
-        if catProduct.title == "Mobile" {
-            cell.pdtImage.loadImage(from: catProduct.imageURL, defaultImage: UIImage(named: "Mobiles"))
-        }
-        if catProduct.title == "Appliances" {
-            cell.pdtImage.loadImage(from: catProduct.imageURL, defaultImage: UIImage(named: "Appliances"))
-        }
-        if catProduct.title == "Smart TV" {
-            cell.pdtImage.loadImage(from: catProduct.imageURL, defaultImage: UIImage(named: "SmartTV"))
-        }
-        if catProduct.title == "Wearables" {
-            cell.pdtImage.loadImage(from: catProduct.imageURL, defaultImage: UIImage(named: "Wearables"))
-        }
-        
-        
+        cell.product = catProducts[indexPath.item]
         return cell
     }
 }

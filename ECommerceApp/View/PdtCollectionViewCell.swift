@@ -7,15 +7,14 @@
 
 import UIKit
 
-//
-//star
 
 class PdtCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var pdtImage: UIImageView!
     @IBOutlet weak var offerlabel: UILabel!
     @IBOutlet weak var namelabel: UILabel!
-    @IBOutlet weak var pricelabel: UILabel!
+    @IBOutlet weak var actualPriceLabel: UILabel!
+    @IBOutlet weak var offerPriceLabel: UILabel!
     @IBOutlet weak var ratgStackView: UIStackView!
     
     
@@ -37,9 +36,16 @@ class PdtCollectionViewCell: UICollectionViewCell {
         
         guard let product = product else { return }
         pdtImage.loadImage(from: product.imageURL, defaultImage: UIImage(named: "Electronics"))       
-        offerlabel.text = product.discount
+        offerlabel.text = "Sale \(product.discount ?? "No Off")"
         namelabel.text = product.productName
-        pricelabel.text = product.offerPrice
+        offerPriceLabel.text = product.offerPrice
+        if let actualPrice = product.actualPrice {
+                let attributedString = NSAttributedString(
+                    string: actualPrice,
+                    attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue]
+                )
+                actualPriceLabel.attributedText = attributedString
+            }
         
         guard let rtg = product.productRating else {
             return
@@ -59,6 +65,8 @@ class PdtCollectionViewCell: UICollectionViewCell {
         self.layer.borderColor = UIColor.lightGray.cgColor
         
         offerlabel.layer.cornerRadius = 6
+        offerlabel.layer.masksToBounds = true
+        
         
     }
 

@@ -25,17 +25,23 @@
                             <constraint firstAttribute="width" constant="60" id="f0n-bl-oAv"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFm-wi-9kW">
-                        <rect key="frame" x="4" y="121" width="25" height="12"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFm-wi-9kW">
+                        <rect key="frame" x="4" y="121" width="45.5" height="10"/>
+                        <attributedString key="attributedText">
+                            <fragment content="ActualPrice">
+                                <attributes>
+                                    <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <font key="NSFont" metaFont="system" size="8"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Offer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEH-mX-6LQ">
-                        <rect key="frame" x="4" y="81" width="56" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEH-mX-6LQ">
+                        <rect key="frame" x="4" y="68" width="80" height="14"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="8nU-yu-zYa"/>
+                            <constraint firstAttribute="width" constant="80" id="8nU-yu-zYa"/>
                             <constraint firstAttribute="height" constant="14" id="N3d-bX-NDf"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -78,9 +84,9 @@
                             <constraint firstAttribute="height" constant="12" id="TvE-s6-URA"/>
                         </constraints>
                     </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vv9-iw-aRe">
-                        <rect key="frame" x="40" y="122" width="25" height="12"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OfferPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vv9-iw-aRe">
+                        <rect key="frame" x="57.5" y="121.5" width="36" height="9.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -105,10 +111,11 @@
             </constraints>
             <size key="customSize" width="213" height="293"/>
             <connections>
+                <outlet property="actualPriceLabel" destination="nFm-wi-9kW" id="6en-nb-nZ0"/>
                 <outlet property="namelabel" destination="XQc-FI-ZWo" id="szv-S3-x69"/>
+                <outlet property="offerPriceLabel" destination="Vv9-iw-aRe" id="zJA-CA-bH6"/>
                 <outlet property="offerlabel" destination="SEH-mX-6LQ" id="Hnn-M3-HrS"/>
                 <outlet property="pdtImage" destination="Q2q-Jt-CAh" id="Nxb-Yq-gH8"/>
-                <outlet property="pricelabel" destination="nFm-wi-9kW" id="c21-0i-L6o"/>
                 <outlet property="ratgStackView" destination="Dbm-Qn-nLm" id="3Hm-0d-Zn6"/>
             </connections>
             <point key="canvasLocation" x="89.855072463768124" y="168.75"/>
