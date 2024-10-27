@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "SmartTV.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "SmartTV.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
