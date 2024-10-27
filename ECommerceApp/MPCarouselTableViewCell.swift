@@ -40,14 +40,19 @@ extension MPCarouselTableViewCell: UICollectionViewDataSource {
         
         let product = products[indexPath.item]
         
-        cell.pdtImage.loadImage(from: product.imageURL)
+        cell.pdtImage.loadImage(from: product.imageURL, defaultImage: UIImage(named: "Electronics"))
         cell.offerlabel.text = product.discount
         cell.namelabel.text = product.productName
-        cell.ratinglabel.text = "\(product.productRating ?? 0) * "
+
         cell.pricelabel.text = product.actualPrice
         
         return cell
     }
+}
+
+extension MPCarouselTableViewCell: UICollectionViewDelegateFlowLayout {
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 96, height: 150)
+    }
 }

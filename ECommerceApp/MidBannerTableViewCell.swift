@@ -9,10 +9,18 @@ import UIKit
 
 class MidBannerTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var midBannerImage: UIImageView!
+    @IBOutlet private weak var midBannerImage: UIImageView!
+    
+    var imageURl: String? {
+        didSet {
+            midBannerImage.loadImage(from: imageURl , defaultImage: UIImage(named: "MidBanner"))
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        midBannerImage.layer.cornerRadius = 10
         // Initialization code
     }
 

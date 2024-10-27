@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-BB-3f3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-BB-3f3">
+                        <rect key="frame" x="16" y="16" width="288" height="12"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G9d-ND-NIf">
                             <size key="itemSize" width="128" height="128"/>
@@ -26,16 +26,16 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <connections>
-                            <outlet property="dataSource" destination="-1" id="nro-ln-A0M"/>
-                            <outlet property="delegate" destination="-1" id="pPZ-eN-FBD"/>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="Llf-Vc-CKz"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="aGu-Yj-C22"/>
                         </connections>
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="bwK-BB-3f3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PSt-oo-MOV"/>
-                    <constraint firstAttribute="trailing" secondItem="bwK-BB-3f3" secondAttribute="trailing" id="QJa-7Z-wwl"/>
-                    <constraint firstAttribute="bottom" secondItem="bwK-BB-3f3" secondAttribute="bottom" id="gym-FT-oPB"/>
-                    <constraint firstItem="bwK-BB-3f3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qiu-gm-tcG"/>
+                    <constraint firstItem="bwK-BB-3f3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="PSt-oo-MOV"/>
+                    <constraint firstAttribute="trailing" secondItem="bwK-BB-3f3" secondAttribute="trailing" constant="16" id="QJa-7Z-wwl"/>
+                    <constraint firstAttribute="bottom" secondItem="bwK-BB-3f3" secondAttribute="bottom" constant="16" id="gym-FT-oPB"/>
+                    <constraint firstItem="bwK-BB-3f3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qiu-gm-tcG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -37,18 +37,18 @@ extension BSCarouselTableViewCell:UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = bsCollectionView.dequeueReusableCell(withReuseIdentifier: "PdtCell", for: indexPath) as! PdtCollectionViewCell
-        
-        let product = products[indexPath.item]
-                
-                cell.pdtImage.loadImage(from: product.imageURL)
-                cell.offerlabel.text = product.discount
-                cell.namelabel.text = product.productName
-                cell.ratinglabel.text = "\(product.productRating ?? 0) * "
-                cell.pricelabel.text = product.offerPrice
-                
-        
+    
+        cell.product = products[indexPath.item]
+                    
         return cell
     }
     
     
+}
+
+extension BSCarouselTableViewCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 96, height: 150)
+    }
 }

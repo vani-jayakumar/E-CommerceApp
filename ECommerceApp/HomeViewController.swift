@@ -39,8 +39,6 @@ class HomeViewController: UIViewController {
         let nib6 = UINib(nibName: "MPCarouselTableViewCell", bundle: nil)
             tableView.register(nib6, forCellReuseIdentifier: "MPCarouselCell")
         
-        
-        
         fetchData()
     }
     
@@ -64,9 +62,7 @@ extension HomeViewController: UITableViewDataSource{
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TopBannerCell", for: indexPath) as! TopBannerTableViewCell
-            if let contents = sections.first?.contents, !contents.isEmpty {
-                   cell.topBannerImage.loadImage(from: contents[0].imageURL, defaultImage: UIImage(named: "TopBanner"))
-            }
+            cell.startSlidingAnimation()
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! LabelTableViewCell
@@ -85,7 +81,7 @@ extension HomeViewController: UITableViewDataSource{
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MidBannerCell", for: indexPath) as! MidBannerTableViewCell
             if sections.count > 2, let imageURL = sections[2].imageURL {
-                cell.midBannerImage.loadImage(from: imageURL, defaultImage: UIImage(named: "MidBanner"))
+                cell.imageURl = imageURL
             }
             return cell
             
@@ -132,7 +128,7 @@ extension HomeViewController: UITableViewDelegate{
         case 0:
             return 150
         case 3:
-            return 100
+            return 140
         
         case 1, 4, 6:
             return 30

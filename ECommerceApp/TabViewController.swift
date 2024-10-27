@@ -32,7 +32,5 @@ class TabViewController: UITabBarController {
         viewControllers = [homeController,categoryController,cartController,offersController, accountController]
     
     }
-    
-
 
 }

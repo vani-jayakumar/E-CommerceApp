@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke1-Ss-3Fq">
-                        <rect key="frame" x="20" y="-32" width="42" height="108"/>
+                        <rect key="frame" x="36" y="-32" width="42" height="108"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOo-DT-sr5">
-                        <rect key="frame" x="362" y="-37" width="55" height="118"/>
+                        <rect key="frame" x="340" y="-37" width="55" height="118"/>
                         <state key="normal" title="View All">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
@@ -31,9 +31,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="VOo-DT-sr5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-48" id="5hq-qA-FbF"/>
-                    <constraint firstItem="Ke1-Ss-3Fq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="9Pd-rZ-GUd"/>
+                    <constraint firstItem="Ke1-Ss-3Fq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="9Pd-rZ-GUd"/>
                     <constraint firstItem="Ke1-Ss-3Fq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KOh-vf-77t"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="VOo-DT-sr5" secondAttribute="trailing" constant="-14" id="eiq-OP-ehY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VOo-DT-sr5" secondAttribute="trailing" constant="8" id="eiq-OP-ehY"/>
                     <constraint firstItem="Ke1-Ss-3Fq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-43" id="lXx-zr-6eK"/>
                     <constraint firstItem="VOo-DT-sr5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pwM-Wg-Qaa"/>
                 </constraints>

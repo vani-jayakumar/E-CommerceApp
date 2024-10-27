@@ -57,3 +57,10 @@ extension CatCarouselTableViewCell: UICollectionViewDataSource {
         return cell
     }
 }
+
+extension CatCarouselTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: 90, height: 110)
+    }
+}
